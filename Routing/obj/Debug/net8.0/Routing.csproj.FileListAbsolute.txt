@@ -27,3 +27,4 @@ C:\Users\Acer\Desktop\Routing\Routing\obj\Debug\net8.0\refint\Routing.dll
 C:\Users\Acer\Desktop\Routing\Routing\obj\Debug\net8.0\Routing.pdb
 C:\Users\Acer\Desktop\Routing\Routing\obj\Debug\net8.0\Routing.genruntimeconfig.cache
 C:\Users\Acer\Desktop\Routing\Routing\obj\Debug\net8.0\ref\Routing.dll
+C:\Users\Acer\Desktop\Routing\Routing\obj\Debug\net8.0\Routing.sourcelink.json
