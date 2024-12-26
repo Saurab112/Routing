@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Acer\\Desktop\\Routing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F60E24F-BCCF-470A-87BE-A0C1F7F19489}|Routing\\Routing.csproj|c:\\users\\acer\\desktop\\routing\\routing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F60E24F-BCCF-470A-87BE-A0C1F7F19489}|Routing\\Routing.csproj|solutionrelative:routing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Acer\\Desktop\\Routing\\RoutingExample\\RoutingExample\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RoutingExample\\RoutingExample\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02B7C361-6A2A-4767-8637-A351BBE96CB4}|Routing2\\Routing2.csproj|c:\\users\\acer\\desktop\\routing\\routing2\\customconstraints\\customrouteconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02B7C361-6A2A-4767-8637-A351BBE96CB4}|Routing2\\Routing2.csproj|solutionrelative:routing2\\customconstraints\\customrouteconstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Acer\\Desktop\\Routing\\Routing\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Routing\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02B7C361-6A2A-4767-8637-A351BBE96CB4}|Routing2\\Routing2.csproj|c:\\users\\acer\\desktop\\routing\\routing2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02B7C361-6A2A-4767-8637-A351BBE96CB4}|Routing2\\Routing2.csproj|solutionrelative:routing2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Acer\\Desktop\\Routing\\Routing2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Routing2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Acer\\Desktop\\Routing\\Routing2\\CustomConstraints\\CustomRouteConstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Routing2\\CustomConstraints\\CustomRouteConstraint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Routing\\RoutingExample\\RoutingExample\\Program.cs",
+              "RelativeDocumentMoniker": "RoutingExample\\RoutingExample\\Program.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Routing\\RoutingExample\\RoutingExample\\Program.cs",
+              "RelativeToolTip": "RoutingExample\\RoutingExample\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T03:23:38.255Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -34,12 +51,11 @@
               "RelativeToolTip": "Routing2\\Program.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAcwBwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T02:37:59.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T02:37:59.806Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CustomRouteConstraint.cs",
               "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Routing\\Routing2\\CustomConstraints\\CustomRouteConstraint.cs",
               "RelativeDocumentMoniker": "Routing2\\CustomConstraints\\CustomRouteConstraint.cs",
@@ -47,12 +63,11 @@
               "RelativeToolTip": "Routing2\\CustomConstraints\\CustomRouteConstraint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T02:37:23.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T02:37:23.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Routing\\Routing\\Program.cs",
               "RelativeDocumentMoniker": "Routing\\Program.cs",
