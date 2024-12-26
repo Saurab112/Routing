@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Routing"
+    "\\Routing",
+    "\\Routing2",
+    "\\Routing2\\CustomConstraints"
   ],
   "SelectedNode": "\\Routing.sln",
   "PreviewInSolutionExplorer": false

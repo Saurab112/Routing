@@ -4,133 +4,52 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 
-////we enabled routing
-//app.UseRouting();
 
-////created endpoints
-//app.UseEndpoints(endpoints =>
-//{
-//	//we added here our endpoints
-//	endpoints.MapGet("/", async(context) =>
-//	{
-//		 await context.Response.WriteAsync("Hello there");
-//	});
-
-//	endpoints.MapPost("map2", async (context) =>
-//	{
-//	await context.Response.WriteAsync("In Map 2");
-//	});
-//});
-
-//app.Run(async context =>
-//{
-//	await context.Response.WriteAsync($"Request received at {context.Request.Path}");
-//});
-
-//app.Run();
-
-
-
-//app.Use(async (context, next) =>
-//{
-//	Microsoft.AspNetCore.Http.Endpoint? endPoint = context.GetEndpoint();
-//	if (endPoint != null)
-//	{
-//		await context.Response.WriteAsync($"Endpoint: {endPoint.DisplayName}\n");
-//	}
-//	await next(context);
-//});
-
-////enable routing
-//app.UseRouting();
-
-//app.Use(async (context, next) =>
-//{
-//	Microsoft.AspNetCore.Http.Endpoint? endPoint = context.GetEndpoint();
-//	if (endPoint != null)
-//	{
-//		await context.Response.WriteAsync($"Endpoint: {endPoint.DisplayName}\n");
-//	}
-
-//	await next(context);
-//});
-
-////creating endpoints
-//app.UseEndpoints(endpoints =>
-//{
-//	//add your endpoints here
-//	endpoints.MapGet("map1", async (context) => {
-//		await context.Response.WriteAsync("In Map 1");
-//	});
-
-//	endpoints.MapPost("map2", async (context) => {
-//		await context.Response.WriteAsync("In Map 2");
-//	});
-//});
-
-//app.Run(async context => {
-//	await context.Response.WriteAsync($"Request received at {context.Request.Path}");
-//});
-//app.Run();
-
-
-//route parameter
-
+// Enable routing (minimal API style)
 app.UseRouting();
 
-app.UseEndpoints(endpoints =>
+// Creating endpoints
+app.MapGet("/Hello/{name=Saurab}", (string name) =>
 {
-	//{name=Saurab} is a default value
-	endpoints.MapGet("/Hello/{name=Saurab}", async (context) =>
-	{
-		var name = context.Request.RouteValues["name"];
-		await context.Response.WriteAsync($"Hello, {name}");
-	});
+	return Results.Ok($"Hello, {name}");
+});
 
-	endpoints.MapGet("/greet/{name?}", async (context) =>
-	{
-		//{name?} is optional parameter
-		var name = context.Request.RouteValues["name"] ?? "Guest";
-		await context.Response.WriteAsync($"Hello, {name}");
-	});
+app.MapGet("/greet/{name?}",  (string? name) =>
+{
+	name ??= "Guest";
+	return Results.Ok($"Hello, {name}");
+});
 
+app.MapGet("/sum/{num1}/{num2}",  (int num1, int num2) =>
+{
+	var sum = num1 + num2;
+	return Results.Ok($"Sum: {sum}");
+});
 
-	endpoints.MapGet("/sum/{num1}/{num2}", async (context) =>
-	{
-		var num1 = int.Parse(context.Request.RouteValues["num1"].ToString());
-		var num2 = int.Parse(context.Request.RouteValues["num2"].ToString());
-		var sum = num1 + num2;
-		await context.Response.WriteAsync($"Sum: {sum}");
-	});
+// Route with type safety (integer constraint)
+app.MapGet("/product/{id:int}", async (int id) =>
+{
+	return Results.Ok($"Product id: {id}");
+});
 
-	//route constraints(type safety)
-	endpoints.MapGet("/product/{id:int}", async (context) =>
-	{
-		var id = context.Request.RouteValues["id"];
-		await context.Response.WriteAsync($"Product id: {id}");
-	});
+// Example route with a file-like URL
+app.MapGet("files/{filename}.{extension}",  (string filename, string extension) =>
+{
+	return Results.Ok($"In files - {filename} - {extension}");
+});
 
-	// Example: files/sample.txt
-	endpoints.Map("files/{filename}.{extension}", async context =>
-	{
-		string? fileName = Convert.ToString(context.Request.RouteValues["filename"]);
-		string? extension = Convert.ToString(context.Request.RouteValues["extension"]);
-
-		await context.Response.WriteAsync($"In files - {fileName} - {extension}");
-	});
-
-	// Example: employee/profile/john
-	endpoints.Map("employee/profile/{EmployeeName}", async context =>
-	{
-		string? employeeName = Convert.ToString(context.Request.RouteValues["employeename"]);
-		await context.Response.WriteAsync($"In Employee profile - {employeeName}");
-	});
+// Example route for employee profile
+app.MapGet("employee/profile/{EmployeeName}",  (string employeeName) =>
+app.MapGet("employee/profile/{EmployeeName}",  (string employeeName) =>
+{
+	return Results.Ok($"In Employee profile - {employeeName}");
 });
 
 app.Run(async context =>
 {
 	await context.Response.WriteAsync($"Request received at {context.Request.Path}");
 });
+
 /*Summary:
 { param} – Required parameter
 { param?} – Optional parameter
@@ -138,5 +57,7 @@ app.Run(async context =>
 { param:type } – Type constraint
 Complex routes allow multi-segment and file-like URLs
 */
+
+
 
 app.Run();
